@@ -1,0 +1,30 @@
+{
+  "name": "glyphs-extract",
+  "version": "1.0.0",
+  "description": "Extract glyphs from font and svg and return a json",
+  "main": "./dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salsan/glyphs-extract.git"
+  },
+  "keywords": [
+    "glyphs",
+    "json",
+    "nodejs",
+    "css",
+    "font",
+    "svg"
+  ],
+  "author": "Salvatore Santagati",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salsan/glyphs-extract/issues"
+  },
+  "homepage": "https://github.com/salsan/glyphs-extract#readme"
+}
