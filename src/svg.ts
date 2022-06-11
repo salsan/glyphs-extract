@@ -2,7 +2,7 @@ import { GlyphsJsonInterface, GlyphInterface } from './lib/GlyphInterface'
 import { XmlGlyphInterface, XmlInterface } from './lib/XmlInterface'
 const converter = require('xml-js')
 
-function init (data:string):GlyphsJsonInterface {
+function init (data: string): GlyphsJsonInterface {
   const glyphs:GlyphsJsonInterface = { name: '', item: [] }
 
   const json = getJson(data)
@@ -11,19 +11,19 @@ function init (data:string):GlyphsJsonInterface {
   return (glyphs)
 }
 
-function getJson (data:string) {
+function getJson (data: string) {
   const options = { ignoreComment: true, compact: true }
 
   return (converter.xml2js(data, options))
 }
 
-function getName (data:XmlInterface):string {
+function getName (data: XmlInterface): string {
   return data.svg.defs.font._attributes.id
 }
 
-function getGlyphs (data:XmlInterface):Array<GlyphInterface> {
-  const glyphsList:Array<GlyphInterface> = []
-  const glyphArray:Array<XmlGlyphInterface> = data.svg.defs.font.glyph
+function getGlyphs (data: XmlInterface): Array<GlyphInterface> {
+  const glyphsList: Array<GlyphInterface> = []
+  const glyphArray: Array<XmlGlyphInterface> = data.svg.defs.font.glyph
 
   let x :number = 0
 

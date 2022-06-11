@@ -2,7 +2,7 @@ import { XmlInterface } from './lib/XmlInterface'
 import { GlyphsJsonInterface } from './lib/GlyphInterface'
 import { OptionsInterface } from './lib/OptionsInterface'
 
-function toJson (value: XmlInterface, options: OptionsInterface) :GlyphsJsonInterface {
+function toJson (value: XmlInterface, options: OptionsInterface): GlyphsJsonInterface {
   let glyph
 
   switch (options.format) {
