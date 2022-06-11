@@ -2,7 +2,7 @@ import { XmlInterface } from './lib/XmlInterface'
 import { GlyphsJsonInterface } from './lib/GlyphInterface'
 import { OptionsInterface } from './lib/OptionsInterface'
 
-function toJson (value: XmlInterface, options: OptionsInterface): GlyphsJsonInterface {
+module.exports = function toJson (value: XmlInterface, options: OptionsInterface): GlyphsJsonInterface {
   let glyph
 
   switch (options.format) {
@@ -15,8 +15,4 @@ function toJson (value: XmlInterface, options: OptionsInterface): GlyphsJsonInte
   }
 
   return glyph.init(value)
-}
-
-module.exports = {
-  toJson
 }

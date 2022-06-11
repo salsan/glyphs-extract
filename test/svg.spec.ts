@@ -14,7 +14,7 @@ describe('Function init()', function () {
 
 describe('Convert Svg to Json', function () {
   it('Pass data from File', function () {
-    const result = convert.toJson(data, { format: 'svg' })
+    const result = convert(data, { format: 'svg' })
     console.log(result)
     assert.ok(typeof (result) === 'object', 'The value is not an object')
   })
