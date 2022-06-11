@@ -7,14 +7,14 @@ const data = fs.readFileSync('./test/assets/Chess.svg', 'utf8')
 
 describe('Function init()', function () {
   it('Pass data from File', function () {
-    const result = svg.init(data)
+    const result = svg.init(data, { format: 'svg' })
     assert.ok(typeof (result) === 'object', 'The value is not an object')
   })
 })
 
 describe('Convert Svg to Json', function () {
   it('Pass data from File', function () {
-    const result = convert.toJson(data)
+    const result = convert.toJson(data, { format: 'svg' })
     console.log(result)
     assert.ok(typeof (result) === 'object', 'The value is not an object')
   })

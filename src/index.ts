@@ -1,9 +1,20 @@
 import { XmlInterface } from './lib/XmlInterface'
 import { GlyphsJsonInterface } from './lib/GlyphInterface'
-const svg = require('./svg')
+import { OptionsInterface } from './lib/OptionsInterface'
 
-function toJson (value :XmlInterface) :GlyphsJsonInterface {
-  return svg.init(value)
+function toJson (value: XmlInterface, options: OptionsInterface) :GlyphsJsonInterface {
+  let glyph
+
+  switch (options.format) {
+    case 'css' :
+      glyph = require('./css')
+      break
+    case 'svg' :
+      glyph = require('./svg')
+      break
+  }
+
+  return glyph.init(value)
 }
 
 module.exports = {
