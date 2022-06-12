@@ -1,7 +1,7 @@
 export interface GlyphInterface {
-    name :string;
-    unicode :number;
-    path :string;
+    name: string ;
+    unicode: string;
+    path?: string;
 }
 
 export interface GlyphsJsonInterface {
