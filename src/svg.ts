@@ -11,7 +11,7 @@ function init (data: string): GlyphsJsonInterface {
   return (glyphs)
 }
 
-function getJson (data: string) {
+function getJson (data: string): XmlInterface {
   const options = { ignoreComment: true, compact: true }
 
   return (converter.xml2js(data, options))

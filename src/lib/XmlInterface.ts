@@ -7,27 +7,27 @@ export interface XmlDeclarationInterface {
 
 export interface XmlGlyphInterface {
     _attributes:{
-        unicode:number;
-        'glyph-name':string;
-        'data-tags':string;
-        d:string;
+        unicode: string;
+        'glyph-name': string;
+        'data-tags': string;
+        d: string;
     }
 }
 
 export interface XmlFontInterface {
     _attributes: {
-        id:string;
-        'horiz-adv-x':number;
+        id: string;
+        'horiz-adv-x': number;
     };
     'font-face': {
         _attributes: {
-            'unit-per-em':number;
-            ascent:number;
+            'unit-per-em': number;
+            ascent: number;
         }
     };
     'missing-glyph': {
         _attributes: {
-            'horizon-adv-x':number;
+            'horizon-adv-x': number;
         }
     };
     glyph:Array<XmlGlyphInterface>;
@@ -35,7 +35,7 @@ export interface XmlFontInterface {
 
 export interface XmlSvgInterface {
     _attributes: {
-        xmls:string;
+        xmls: string;
         metadata: {};
     };
     defs:{
@@ -45,6 +45,6 @@ export interface XmlSvgInterface {
 
 export interface XmlInterface {
     _declaration: XmlDeclarationInterface;
-    _doctype:string;
+    _doctype: string;
     svg: XmlSvgInterface;
 }
