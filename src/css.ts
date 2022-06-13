@@ -38,7 +38,7 @@ function getGlyphs (data: CssInterface): Array<GlyphInterface> {
 
       if ((glyphName !== null) && (glyphValue !== null)) {
         glyphsList[x] = {
-          name: glyphName[0],
+          name: glyphName[1],
           unicode: glyphValue[1]
         }
         x++
