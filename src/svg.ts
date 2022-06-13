@@ -1,5 +1,7 @@
 import { GlyphsJsonInterface, GlyphInterface } from './lib/GlyphInterface'
 import { XmlGlyphInterface, XmlInterface } from './lib/XmlInterface'
+const { hexEncode } = require('./utils')
+
 const converter = require('xml-js')
 
 function init (data: string): GlyphsJsonInterface {
@@ -28,10 +30,10 @@ function getGlyphs (data: XmlInterface): Array<GlyphInterface> {
   let x :number = 0
 
   for (let i = 0; i < glyphArray.length; i++) {
-    if (glyphArray[i]?._attributes['glyph-name'] !== undefined) {
+    if (glyphArray[i]._attributes['glyph-name'] !== undefined) {
       glyphsList[x] = {
         name: glyphArray[i]._attributes['glyph-name'],
-        unicode: glyphArray[i]._attributes.unicode,
+        unicode: hexEncode(glyphArray[i]._attributes.unicode),
         path: glyphArray[i]._attributes.d
       }
       x++
